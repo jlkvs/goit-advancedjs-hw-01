@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 24px;
+}
+
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    padding: 0;
+    justify-items: center;
+}
+
+
+.gallery-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item,
+.gallery-link {
+    display: block;
+    width: 100%;
+}
+
+.gallery-image:hover,
+.gallery-item:focus {
+    transform: scale(1.03); }
